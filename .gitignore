@@ -1,4 +1,11 @@
 # Byte-compiled / optimized / DLL files
+
+.ipynb_checkpoints
+credentials.py
+data/
+.DS_Store
+
+
 __pycache__/
 *.py[cod]
 *$py.class
