@@ -1,10 +1,10 @@
 # Byte-compiled / optimized / DLL files
-
-.ipynb_checkpoints
 credentials.py
 data/
-.DS_Store
+todo-list.md
 
+.ipynb_checkpoints
+.DS_Store
 
 __pycache__/
 *.py[cod]

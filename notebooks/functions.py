@@ -1,14 +1,19 @@
+# It is important to acknowledge that much of the steps taken in the process creating `paragraph_processor` and `text_processor` in the `functions.py` file are inspired and indebted to an exceptional blog (https://highdemandskills.com/topic-trends-fomc/), which served as a valuable resource in understanding and implementing the scraping and preprocessing techniques for the FOMC meeting minutes. The blog's contribution has been pivotal in making this project possible and enhancing its quality.
+
 import requests
 from bs4 import BeautifulSoup
 import re
 import spacy
-import gensim.corpora as corpora
+
+################
+####################
+#######################
 
 nlp = spacy.load("en_core_web_lg")
-nlp.max_length = 1500000 # In case max_length is set to lower than this (ensure sufficient memory)
+nlp.max_length = 1500000 # In case max_length is set to lower than this.
 
 
-def paragraph_process(paragraph, allowed_pos):
+def paragraph_processor(paragraph, allowed_pos):
     """
     Process a paragraph of text to extract relevant lemmatized tokens.
 
@@ -30,6 +35,7 @@ def paragraph_process(paragraph, allowed_pos):
 #############
 ################
 ##################
+
 def text_processor(date, minparalength=200, allowed_pos=["NOUN", "ADJ", "VERB"], raw_text=False):
     """
     Clean and process text from Federal Reserve minutes webpage for a specific date.
@@ -95,7 +101,7 @@ def text_processor(date, minparalength=200, allowed_pos=["NOUN", "ADJ", "VERB"],
     
     else:
         # Process each paragraph to obtain relevant lemmatized tokens
-        paragraphs = [paragraph_process(para, allowed_pos) for para in minutes_para]
+        paragraphs = [paragraph_processor(para, allowed_pos) for para in minutes_para]
 
         # Filter paragraphs based on the number of tokens (minimum of 10 tokens)
         paragraphs = [para for para in paragraphs if len(para) > 10]
