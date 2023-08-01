@@ -10,7 +10,7 @@ By incorporating a variety of economic indicators into the final dataset, this s
 
 |Feature|Type|Dataset|Description|
 |---|---|---|---|
-|**ffr**|float|FRED|The federal funds rate is the interest rate at which depository institutions trade federal funds (balances held at Federal Reserve Banks) with each other overnight. When a depository institution has surplus balances in its reserve account, it lends to other banks in need of larger balances.|
+|**ffr**|float|FRED|The federal funds rate is the interest rate at which depository institutions trade federal funds (balances held at Federal Reserve Banks) with each other overnight. ([link](https://fred.stlouisfed.org/series/DFF))|
 |**vix**|*object*|FRED|| 
 
 
