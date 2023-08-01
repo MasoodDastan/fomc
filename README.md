@@ -17,8 +17,9 @@ By incorporating a variety of economic indicators into the final dataset, this s
 |**vix**|float|FRED|VIX measures market expectation of near term volatility conveyed by stock index option prices. ([link](https://fred.stlouisfed.org/series/VIXCLS))|
 |**real_gdp**|float|FRED|The inflation adjusted value of the goods and services produced by labor and property located in the United States. ([link](https://fred.stlouisfed.org/series/GDPC1))|
 |**cpi**|float|FRED|Price index of a basket of goods and services paid by urban consumers. ([link](https://fred.stlouisfed.org/series/CPIAUCSL))|
-|**10year_3month_yield_spread**|float|FRED|The spread between 10-Year Treasury Constant Maturity and 3-Month Treasury Constant Maturity ([link](https://fred.stlouisfed.org/series/T10Y3M))|
-|**us_china_exchange_rate**|float|FRED|Chinese Yuan Renminbi to U.S. Dollar Spot Exchange Rate ([link](https://fred.stlouisfed.org/series/DEXCHUS))|
+|**10year_3month_yield_spread**|float|FRED|The spread between 10-Year Treasury Constant Maturity and 3-Month Treasury Constant Maturity. ([link](https://fred.stlouisfed.org/series/T10Y3M))|
+|**us_china_exchange_rate**|float|FRED|Chinese Yuan Renminbi to U.S. Dollar Spot Exchange Rate. ([link](https://fred.stlouisfed.org/series/DEXCHUS))|
+|**us_japan_exchange_rate**|float|FRED|Japanese Yen to U.S. Dollar Spot Exchange Rate. ([link](https://fred.stlouisfed.org/series/DEXJPUS))|
 |**FOMC minutes**|object|Federal Reserve|The minutes text data of the FOMC meetings ([link](https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm))|
 |**epu**|float|Economic Policy Uncertainty ([link](https://www.policyuncertainty.com/))|
 
