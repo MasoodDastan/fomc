@@ -1,4 +1,4 @@
-# Analyzing the Impact of Federal Open Market Committee Meetings on Stock Market Performance
+# Investigating the Impact of FOMC Meetings on Stock Market Performance
 
 ## Problem Statement:
 
@@ -26,5 +26,26 @@ By incorporating a variety of economic indicators, this project seeks to gain va
 
 ## Executive Summary:
 
-In this project
+
+The goal of this project is to investigate the impact of Federal Open Market Committee (FOMC) meetings on stock market performance. The FOMC is the monetary policymaking body of the Federal Reserve System, responsible for supervising the country's open market operations and shaping monetary policy. The project used text analysis to uncover key themes, discussions, and focal points in FOMC meetings and gauge the overall sentiment among committee members during meetings. Additionally, a diverse range of economic indicators was integrated to contextualize FOMC decisions within the broader economic landscape, identifying potential interconnections between monetary policy and overall economic performance.
+
+### Data Collection and Feature Engineering:
+Data for the project was collected from three different sources. The S&P 500 index price data was gathered from Yahoo Finance, providing comprehensive stock market performance information. Three new features were engineered from this data, including target variable labels (price change) from the adjusted close price, percentage change in Adjust closing price (lagged), and the 15-day rolling average of the percentage change in Adjust closing price (lagged).
+
+The second source of data was FRED (Federal Reserve Economic Data), providing access to a wide range of essential economic indicators. The project used the FRED API to scrape indicators such as Real GDP, Consumer Price Index (CPI), Retail Sales, Federal Fund Rate, Treasury yield, Treasury yield spread, and US dollar strength. Additional engineered features included Year-over-Year (YoY) GDP growth and YoY Inflation Rate.
+
+The last source of data was FOMC meeting minutes, which underwent thorough cleaning steps, including removal of punctuations, stopwords, and non-noun, verb, or adjective words. Lemmatization of the remaining tokens was also performed.
+
+### Topic Modeling and Meeting Sentiments:
+Topic modeling, specifically Latent Dirichlet Allocation (LDA), was employed to reveal key topics and themes discussed during FOMC meetings. This statistical modeling approach helped identify clusters or groups of similar words within the text data, providing insights into the context of discussions and focusing on significant US economic concerns.
+
+Meeting sentiments were generated using two methods. The first method used the Loughran and McDonald Word Dictionary, a specialized word list designed for analyzing financial documents. This approach allowed for effective sentiment analysis of FOMC statements, considering their often-vague and technical language.
+
+The second method employed zero-shot text classification, utilizing a pre-trained transformer model developed by Facebook (BART-large-mnli) which allows classifying previously unseen classes in this project, providing a more comprehensive sentiment analysis. Using this approach a sentiment analysis model was develped to classify FOMC minutes into positive and negative categories.
+
+### Model Evaluation:
+Five classification models (Recurrent Neural Net, Logistic Regression, Random Forest, Support Vector Machine, and Gradient Boosting) were evaluated using cross-validated randomized search. The performance of these models was measured using accuracy and AUC scores. The Gradient Boosting Classifier achieved the highest accuracy (57%) and AUC score (61%).
+
+### Conclusion:
+The project successfully investigated the impact of FOMC meetings on stock market performance and fluctuations using advanced text analysis techniques. The analysis of key themes and discussions in FOMC meetings, combined with meeting sentiments and economic indicators, provided valuable insights into policymakers' expectations and monetary policy's influence on the economy. The findings contribute to a deeper understanding of the relationship between FOMC decisions and overall economic performance, offering potential implications for investors and policymakers alike.
 
