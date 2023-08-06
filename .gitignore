@@ -1,8 +1,7 @@
 # Byte-compiled / optimized / DLL files
 credentials.py
 data/
-todo-list.md
-image/fed_images/
+
 
 .ipynb_checkpoints
 .DS_Store
